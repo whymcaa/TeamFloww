@@ -1,0 +1,33 @@
+.header {
+  width: 100%;
+}
+.header__container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 32px;
+  align-items: center;
+}
+.mobile-menu__button {
+  display: flex;
+  flex-direction: column;
+  height: 30px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  box-shadow: none;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+}
+.mobile-menu-button__text {
+  text-transform: capitalize;
+  font-size: 8px;
+  line-height: 8px;
+}
+.authorization-buttons {
+  display: none;
+}
+.navigation {
+  display: none;
+}

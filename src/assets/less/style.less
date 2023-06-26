@@ -1,0 +1,81 @@
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url("/assets/fonts/Inter-Regular.ttf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    src: url("/assets/fonts/Inter-SemiBold.ttf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    src: url("/assets/fonts/Inter-Bold.ttf");
+    font-display: swap;
+}
+
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+@import url("header.less");
+@import url("vars.less");
+@import url("hero.less");
+@import url("features.less");
+@import url("advantages.less");
+@import url("cta.less");
+@import url("reviews.less");
+@import url("download.less");
+@import url("footer.less");
+
+body {
+    position: relative;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: @text;
+}
+
+.circle-decoration {
+    position: absolute;
+    top: -770px;
+    left: 50%;
+    transform: translate(-50%);
+    overflow: hidden;
+
+    @media (min-width: @desk-width) {
+        width: 3128px;
+        height: 3128px;
+        top: -2285px;
+    }
+}
+
+.body-container {
+    position: relative;
+
+    @media (min-width: @desk-width) {
+        width: 100%;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}

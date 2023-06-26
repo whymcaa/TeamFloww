@@ -1,0 +1,155 @@
+// main: style.less
+
+.reviews {
+    width: 100%;
+    padding: 56px 0;
+
+    @media (min-width: @desk-width) {
+        padding: 100px 0;
+    }
+}
+
+.reviews__container {
+    width: 92%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: @desk-width) {
+        width: 72%;
+    }
+}
+
+.reviews__title {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 24px;
+    max-width: 60%;
+    color: @title;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 40px;
+
+    @media (min-width: @desk-width) {
+        font-size: 40px;
+        line-height: 48px;
+        margin-bottom: 48px;
+        max-width: 50%;
+    }
+}
+
+.reviews__description {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 18px;
+    line-height: 32px;
+    margin-bottom: 40px;
+    max-width: 80%;
+
+    @media (min-width: @desk-width) {
+        max-width: 50%;
+        margin-bottom: 76px;
+    }
+}
+
+.reviews__list {
+    display: flex;
+    align-items: center;
+
+    @media (min-width: @desk-width) {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        column-gap: 5%;
+    }
+}
+
+.reviews__item {
+    display: none;
+
+    @media (min-width: @desk-width) {
+        display: block;
+        justify-self: center;
+    }
+
+    &--current {
+        display: block;
+        position: relative;
+
+        &::before {
+            @media (min-width: @desk-width) {
+                position: absolute;
+                content: "";
+                top: -24px;
+                left: -16px;
+                height: 4px;
+                width: 130%;
+                background-color: @title;
+            }
+        }
+    }
+}
+
+.reviews__button {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+
+    @media (min-width: @desk-width) {
+        display: grid;
+        grid-template-areas: "avatar name"
+        "avatar post";
+        column-gap: 16px;
+        align-items: center;
+    }
+}
+
+.reviews__avatar {
+    margin-bottom: 9px;
+
+    @media (min-width: @desk-width) {
+        grid-area: avatar;
+        margin-bottom: 0;
+    }
+}
+
+.reviews-info {
+    @media (min-width: @desk-width) {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+}
+
+.reviews__author {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    line-height: 13px;
+    margin-bottom: 8px;
+    color: @title;
+    font-weight: 600;
+
+    @media (min-width: @desk-width) {
+        grid-area: name;
+        text-align: left;
+    }
+}
+
+.reviews__post {
+    font-size: 13px;
+    line-height: 13px;
+    padding: 0;
+    margin: 0;
+    color: @text;
+
+    @media (min-width: @desk-width) {
+        grid-area: post;
+        text-align: left;
+    }
+}
+

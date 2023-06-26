@@ -1,0 +1,143 @@
+// main: style.less
+
+.header {
+    width: 92%;
+    margin: 0 auto;
+    margin-bottom: 88px;
+
+    @media (min-width: @desk-width) {
+        width: 78%;
+        margin: 0 auto;
+        margin-bottom: 100px;
+    }
+}
+
+.logo {
+    @media (min-width: @desk-width) {
+        width: 92px;
+        height: 24px;
+    } 
+}
+
+.header__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 32px;
+    align-items: center;
+
+    @media (min-width: @desk-width) {
+     padding-top: 48px;
+     box-sizing: border-box;
+     display: grid;
+     grid-template-columns: 30% 50% 20%;
+    }
+}
+
+.mobile-menu__button {
+    display: flex;
+    flex-direction: column;
+    height: 30px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    box-shadow: none;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+
+    @media (min-width: @desk-width) {
+        display: none;
+    }
+}
+
+.mobile-menu-button__text {
+    text-transform: capitalize;
+    font-size: 8px;
+    line-height: 8px;
+    color: @text;
+}
+
+.authorization-buttons {
+    display: none;
+
+    @media (min-width: @desk-width) {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+.login-button {
+    font-family: 'Inter';
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    color: @text;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.signin-button {
+    font-size: 16px;
+    line-height: 16px;
+    font-family: 'Inter';
+    font-weight: 400;
+    color: @primary;
+    box-shadow: none;
+    border: none;
+    padding: 16px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: #ECE5FF;
+}
+
+.navigation {
+    display: none;
+
+    @media (min-width: @desk-width) {
+        display: block;
+        width: 100%;
+    }
+}
+
+.navigation__list {
+    max-width: 460px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation__item {
+    padding: 0;
+    margin: 0;
+}
+
+.navigation__button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    box-shadow: none;
+}
+
+.navigation-button__text {
+    margin-right: 4px;
+    font-size: 16px;
+    line-height: 16px;
+    color: @text;
+    font-family: 'Inter';
+    font-weight: 400;
+}
+
+.navigation__link {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    line-height: 16px;
+    color: @text;
+    font-family: 'Inter';
+    font-weight: 400;
+}

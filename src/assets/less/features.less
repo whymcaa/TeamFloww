@@ -1,0 +1,134 @@
+// main: style.less
+
+.features {
+    width: 100%;
+    background-color: #FBFAFE;
+    border: 1px solid #F0EBFA;
+}
+
+.features__container {
+    width: 92%;
+    display: grid;
+    grid-template-columns: 100%;
+    margin: 0 auto;
+    row-gap: 36px;
+    padding-top: 32px;
+
+    @media (min-width: @desk-width) {
+        width: 78%;
+        margin: 0 auto;
+        grid-template-columns: 66% 34%;
+        padding: 61px 0;
+        align-items: center;
+    }
+        
+}
+
+.features-img__container {
+    width: 100%;
+}
+
+.features-img {
+    width: 100%;
+    object-fit: cover;
+
+    @media (min-width: @desk-width) {
+        width: 90%;
+    }
+}
+
+.features__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.features__item {
+    padding: 26px 0;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    box-sizing: border-box;
+
+    @media (min-width: @desk-width) {
+        padding: 26px;
+        padding-right: 26px;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        border: 0.5px solid #F0EBFA;
+        z-index: 3;
+    }
+
+    &:first-child::after {
+        border: none;
+        height: 8px;
+        background-color: @primary;
+
+        @media (min-width: @desk-width) {
+            left: 0;
+            width: 8px;
+            top: 0;
+            bottom: 0;
+            height: 100%;
+        }
+    }
+
+    &:first-child {
+        background-color: #F6F3FC;
+        border-radius: 8px 8px 0 0;
+        padding-top: 18px;
+
+        @media (min-width: @desk-width) {
+            border-radius: 0 8px 8px 0;
+            padding-top: 26px;
+        }
+    }
+
+    &:last-child::after {
+        display: none;
+    }
+}
+
+.features__title {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 18px;
+    color: @title;
+    font-weight: 600;
+
+    @media (min-width: @desk-width) {
+        text-align: left;
+    }
+}
+
+.features__description {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    max-width: 80%;
+    display: block;
+    margin: 0 auto;
+
+    @media (min-width: @desk-width) {
+        text-align: left;
+        max-width: 100%;
+    }
+}
+
+
+
+
+
+
+

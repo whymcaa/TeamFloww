@@ -1,0 +1,78 @@
+// main: style.less
+
+.download {
+    width: 100%;
+    background-color: @primary;
+    padding: 32px 0;
+    margin-bottom: 56px;
+
+    @media (min-width: @desk-width) {
+        background-color: transparent;
+        padding: 0;
+        margin-bottom: 100px;
+    }
+}
+
+.download__container {
+    width: 92%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: @desk-width) {
+        width: 72%;
+        box-sizing: border-box;
+        padding: 64px 80px;
+        background-color: @primary;
+        border: 1px solid @primary;
+        border-radius: 16px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.download__text {
+    color: white;
+    padding: 0;
+    margin: 0;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    margin-bottom: 32px;
+    font-weight: 600;
+    width: 90%;
+
+    @media (min-width: @desk-width) {
+        max-width: 55%;
+        text-align: left;
+        margin-bottom: 0;
+        font-size: 32px;
+        line-height: 48px;
+    }
+}
+
+.download__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: @desk-width) {
+        flex-direction: row;
+        align-items: center;
+        width: 60%;
+        justify-content: space-between;
+    }
+}
+
+.download__link {
+    margin-bottom: 26px;
+
+    @media (min-width: @desk-width) {
+        margin-bottom: 0;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

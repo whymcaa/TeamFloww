@@ -1,0 +1,155 @@
+// main: style.less
+
+.footer {
+    width: 100%;
+    padding: 0;
+    padding-top: 48px;
+    background-color: #1D2830;
+
+    @media (min-width: @desk-width) {
+        padding-top: 80px;
+    }
+}
+
+.footer__container {
+    width: 92%;
+    margin: 0 auto;
+
+    @media (min-width: @desk-width) {
+        width: 72%;
+    }
+}
+
+.footer-menu__container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 100%;
+    margin-bottom: 56px;
+
+    @media (min-width: @desk-width) {
+        margin-bottom: 80px;
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+}
+
+.footer__list {
+    margin-bottom: 32px;
+
+    @media (min-width: @desk-width) {
+        justify-self: start;
+    }
+}
+
+.item__arrow {
+    @media (min-width: @desk-width) {
+        display: none;
+    } 
+}
+
+.list__item {
+    display: none;
+
+    @media (min-width: @desk-width) {
+        display: block;
+        margin-bottom: 24px;
+    }
+    
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &--main {
+        display: block;
+    }
+}
+
+.list__link {
+    color: white;
+    font-size: 16px;
+    line-height: 16px;
+
+    &--main {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 600;
+    }
+}
+
+.footer__download {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: @desk-width) {
+        justify-self: end;
+    }
+}
+
+.footer-download__text {
+    color: white;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 16px;
+    font-weight: 600;
+    line-height: 16px;
+
+    @media (min-width: @desk-width) {
+        margin-bottom: 24px;
+    }
+}
+
+.footer-download__link {
+    margin-bottom: 16px;
+
+    &--apple {
+        margin-bottom: 0;
+    }
+}
+
+.footer__social-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 32px 0;
+    position: relative;
+    align-items: center;
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: 2600px;
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.1);
+        top: 0;
+        left: -300px;
+    }
+}
+
+.reserved {
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.social__list {
+    display: none;
+
+    @media (min-width: @desk-width) {
+        display: flex;
+        width: 20%;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.social__decoration {
+    width: 32px;
+    height: 32px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
